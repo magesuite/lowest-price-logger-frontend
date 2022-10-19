@@ -1,0 +1,12 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:MageSuite_Changelog:etc/changelog.xsd">
+    <module id="MageSuite_LowestPriceLoggerFrontend" name="MageSuite_LowestPriceLoggerFrontend">
+        <changelog>
+            <tag version="1.0.0" date="2022-10-10">
+                <entry>
+                    <type>INIT</type>
+                    <overview>Added magesuite price logger frontend module</overview>
+                </entry>
+            </tag>
+        </changelog>
+    </module>
+</config>
