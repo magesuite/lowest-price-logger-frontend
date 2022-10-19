@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="">
+    <body>
+        <referenceBlock name="product.tile.price.wrapper">
+            <block class="MageSuite\ProductTile\Block\Tile\Fragment" name="product.tile.recent_lowest_price" template="MageSuite_LowestPriceLoggerFrontend::recent-lowest-price.phtml" after="product.tile.price">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">MageSuite\LowestPriceLogger\ViewModel\LowestPrice</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

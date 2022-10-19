@@ -1,0 +1,25 @@
+<?php
+/**
+ * @var \MageSuite\LowestPriceLogger\ViewModel\LowestPrice $viewModel
+ */
+?>
+<?php
+$viewModel = $block->getViewModel();
+$product = $block->getProduct();
+$productType = $product->getTypeId();
+$recentLowestPriceFormatted = $viewModel->getByProduct($product, true);
+$renderHidden = false;
+$shouldRender = $viewModel->hasSpecialPrice($product) ? true : false;
+
+if ($productType === 'configurable') {
+    $renderHidden = true;
+    $shouldRender = true;
+}
+?>
+
+<?php if ($recentLowestPriceFormatted && $shouldRender) : ?>
+    <div class="cs-recent-lowest-price" <?= $renderHidden ? 'style="display: none;"' : '' ?>>
+        <span class="cs-recent-lowest-price__label"><?= /* @noEscape */__('30-day lowest price:'); ?></span>
+        <span class="cs-recent-lowest-price__value" data-default-price="<?= $block->escapeHtmlAttr($recentLowestPriceFormatted) ?>"><?= $block->escapeHtml($recentLowestPriceFormatted) ?></span>
+    </div>
+<?php endif; ?>
