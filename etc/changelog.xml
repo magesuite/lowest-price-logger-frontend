@@ -7,6 +7,13 @@
                     <overview>Added magesuite price logger frontend module</overview>
                 </entry>
             </tag>
+            <tag version="1.0.1" date="2022-12-08">
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Add missing translations</overview>
+                    <ticket_id>MGP-1089</ticket_id>
+                </entry>
+            </tag>
         </changelog>
     </module>
 </config>
