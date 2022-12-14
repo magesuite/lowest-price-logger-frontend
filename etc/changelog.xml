@@ -14,6 +14,12 @@
                     <ticket_id>MGP-1089</ticket_id>
                 </entry>
             </tag>
+            <tag version="1.0.2" date="2022-12-14">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add option to define additional classes via XML</overview>
+                </entry>
+            </tag>
         </changelog>
     </module>
 </config>
