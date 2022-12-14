@@ -4,6 +4,7 @@
             <block class="MageSuite\ProductTile\Block\Tile\Fragment" name="product.tile.recent_lowest_price" template="MageSuite_LowestPriceLoggerFrontend::recent-lowest-price.phtml" after="product.tile.price">
                 <arguments>
                     <argument name="view_model" xsi:type="object">MageSuite\LowestPriceLogger\ViewModel\LowestPrice</argument>
+                    <argument name="additional_css_classes" xsi:type="string">cs-recent-lowest-price--tile</argument>
                 </arguments>
             </block>
         </referenceBlock>

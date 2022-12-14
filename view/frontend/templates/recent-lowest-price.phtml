@@ -10,6 +10,7 @@ $productType = $product->getTypeId();
 $recentLowestPriceFormatted = $viewModel->getByProduct($product, true);
 $renderHidden = false;
 $shouldRender = $viewModel->hasSpecialPrice($product) ? true : false;
+$additionalCssClasses = $block->getAdditionalCssClasses();
 
 if ($productType === 'configurable') {
     $renderHidden = true;
@@ -18,7 +19,7 @@ if ($productType === 'configurable') {
 ?>
 
 <?php if ($recentLowestPriceFormatted && $shouldRender) : ?>
-    <div class="cs-recent-lowest-price" <?= $renderHidden ? 'style="display: none;"' : '' ?>>
+    <div class="cs-recent-lowest-price <?= $additionalCssClasses; ?>" <?= $renderHidden ? 'style="display: none;"' : '' ?>>
         <span class="cs-recent-lowest-price__label"><?= /* @noEscape */__('30-day lowest price:'); ?></span>
         <span class="cs-recent-lowest-price__value" data-default-price="<?= $block->escapeHtmlAttr($recentLowestPriceFormatted) ?>"><?= $block->escapeHtml($recentLowestPriceFormatted) ?></span>
     </div>

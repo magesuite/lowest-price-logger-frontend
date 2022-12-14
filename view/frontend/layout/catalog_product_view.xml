@@ -5,6 +5,7 @@
             <block class="Magento\Catalog\Block\Product\View" name="product.info.price.recent_lowest_price" template="MageSuite_LowestPriceLoggerFrontend::recent-lowest-price.phtml" after="-">
                 <arguments>
                     <argument name="view_model" xsi:type="object">MageSuite\LowestPriceLogger\ViewModel\LowestPrice</argument>
+                    <argument name="additional_css_classes" xsi:type="string">cs-recent-lowest-price--buybox</argument>
                 </arguments>
             </block>
         </referenceContainer>
